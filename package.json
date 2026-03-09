@@ -12,6 +12,7 @@
     "#*": "./src/*"
   },
   "dependencies": {
+    "@content-island/api-client": "^0.17.0",
     "@tailwindcss/vite": "^4.2.1",
     "@types/marked": "^5.0.2",
     "astro": "^5.18.0",
