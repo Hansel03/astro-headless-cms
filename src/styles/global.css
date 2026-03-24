@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
-@import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+@import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -44,8 +44,8 @@
 
   --color-text: #000000;
 
-  --font-instrument: 'Instrument Sans', sans-serif;
-  --font-geist: 'Geist', sans-serif;
+  --font-instrument: "Instrument Sans", sans-serif;
+  --font-geist: "Geist", sans-serif;
 }
 
 :root.dark {
@@ -102,8 +102,8 @@
   --color-secondary-900: var(--color-secondary-900);
   --color-secondary-950: var(--color-secondary-950);
 
-  --font-instrument: 'Instrument Sans', sans-serif;
-  --font-geist: 'Geist', sans-serif;
+  --font-instrument: "Instrument Sans", sans-serif;
+  --font-geist: "Geist", sans-serif;
 
   --text-xs: var(--step--2);
   --text-sm: var(--step--1);

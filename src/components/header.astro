@@ -2,11 +2,18 @@
   class="dark:bg-primary-50 text-tbase-500/90 sticky top-0 z-50 flex w-full items-center justify-between bg-white px-4 py-4 md:px-6"
 >
   <div class="font-instrument text-center text-xl font-bold text-nowrap">
-    <a href="/" class="hover:text-primary-500 transition-colors">&lt;&gt;Jwd&lt;/&gt;</a>
+    <a href="/" class="hover:text-primary-500 transition-colors"
+      >&lt;&gt;Jwd&lt;/&gt;</a
+    >
   </div>
 
   <nav class="flex items-center gap-8" aria-label="Main navigation">
-    <a href="/about" class="font-geist hover:text-primary-500 font-semibold transition-colors"> About </a>
+    <a
+      href="/about"
+      class="font-geist hover:text-primary-500 font-semibold transition-colors"
+    >
+      About
+    </a>
 
     <!-- Botón toggle -->
     <button
@@ -22,7 +29,9 @@
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" fill="currentColor"></path>
+          <path
+            d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"
+            fill="currentColor"></path>
         </svg>
 
         <!-- Sun icon -->
@@ -45,19 +54,25 @@
 </header>
 
 <script>
-  const button = document.getElementById('theme-toggle');
+  const button = document.getElementById("theme-toggle");
   const html = document.documentElement;
-  const storedTheme = localStorage.getItem('theme');
+  const storedTheme = localStorage.getItem("theme");
 
   if (storedTheme) {
-    html.classList.toggle('dark', storedTheme === 'dark');
+    html.classList.toggle("dark", storedTheme === "dark");
   }
-  if (!storedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    html.classList.add('dark');
+  if (
+    !storedTheme &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  ) {
+    html.classList.add("dark");
   }
 
-  button?.addEventListener('click', () => {
-    html.classList.toggle('dark');
-    localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+  button?.addEventListener("click", () => {
+    html.classList.toggle("dark");
+    localStorage.setItem(
+      "theme",
+      html.classList.contains("dark") ? "dark" : "light",
+    );
   });
 </script>

@@ -6,4 +6,4 @@ export interface NewsletterContent {
   buttonText: string;
 }
 
-export type NewsletterType = 'wide' | 'mini';
+export type NewsletterType = "wide" | "mini";

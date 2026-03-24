@@ -1,14 +1,14 @@
 ---
-import type { NewsletterContent, NewsletterType } from './newsletter.model';
-import NewsletterWide from './components/newsletter-wide.astro';
-import NewsletterMini from './components/newsletter-mini.astro';
+import type { NewsletterContent, NewsletterType } from "./newsletter.model";
+import NewsletterWide from "./components/newsletter-wide.astro";
+import NewsletterMini from "./components/newsletter-mini.astro";
 
 export const newsletter: NewsletterContent = {
-  title: 'Want to know when I publish new content?',
-  description: 'Enter your email to join my free newsletter:',
-  inputLabel: 'Email address',
-  inputPlaceholder: 'Email',
-  buttonText: 'Subscribe',
+  title: "Want to know when I publish new content?",
+  description: "Enter your email to join my free newsletter:",
+  inputLabel: "Email address",
+  inputPlaceholder: "Email",
+  buttonText: "Subscribe",
 };
 
 interface Props {
@@ -18,4 +18,10 @@ interface Props {
 const { type } = Astro.props;
 ---
 
-{type === 'wide' ? <NewsletterWide content={newsletter} /> : <NewsletterMini content={newsletter} />}
+{
+  type === "wide" ? (
+    <NewsletterWide content={newsletter} />
+  ) : (
+    <NewsletterMini content={newsletter} />
+  )
+}

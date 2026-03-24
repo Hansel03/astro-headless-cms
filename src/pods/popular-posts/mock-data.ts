@@ -5,23 +5,23 @@ interface PostInfo {
 
 export const popularPosts: PostInfo[] = [
   {
-    title: 'Astro Image component - Complete guide',
-    slug: 'astro-image',
+    title: "Astro Image component - Complete guide",
+    slug: "astro-image",
   },
   {
-    title: 'React Alicante Workshop 2024: Summary and Highlights',
-    slug: 'react-alicante-24',
+    title: "React Alicante Workshop 2024: Summary and Highlights",
+    slug: "react-alicante-24",
   },
   {
-    title: 'Create a server action in Astro to handle forms',
-    slug: 'server-action-form',
+    title: "Create a server action in Astro to handle forms",
+    slug: "server-action-form",
   },
   {
-    title: 'Complete Guide to Vue.js 3 and the Composition API',
-    slug: 'vue-three-complete-guide',
+    title: "Complete Guide to Vue.js 3 and the Composition API",
+    slug: "vue-three-complete-guide",
   },
   {
-    title: 'Modern CSS Techniques for 2025 and Beyond',
-    slug: 'css-techniques-2025',
+    title: "Modern CSS Techniques for 2025 and Beyond",
+    slug: "css-techniques-2025",
   },
 ];
