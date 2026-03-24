@@ -4,6 +4,8 @@
   "exclude": ["dist"],
   "sourceMap": true,
   "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
     "baseUrl": "./src/",
     "paths": {
       "@*": ["*"]
