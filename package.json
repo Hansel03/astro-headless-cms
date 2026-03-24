@@ -12,6 +12,7 @@
     "#*": "./src/*"
   },
   "dependencies": {
+    "@astrojs/node": "^9.5.5",
     "@astrojs/react": "^5.0.1",
     "@content-island/api-client": "^0.17.0",
     "@tailwindcss/vite": "^4.2.1",

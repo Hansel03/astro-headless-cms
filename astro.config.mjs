@@ -2,6 +2,7 @@ import { defineConfig } from "astro/config";
 import { defineConfig, envField } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@astrojs/react";
+import node from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
@@ -9,6 +10,9 @@ export default defineConfig({
   vite: {
     plugins: /** @type {any} */ ([tailwindcss()]),
   },
+  adapter: node({
+    mode: "standalone",
+  }),
   env: {
     schema: {
       CONTENT_ISLAND_SECRET_TOKEN: envField.string({

@@ -1,19 +1,31 @@
+import { actions } from "astro:actions";
 import { useState, useEffect } from "react";
 
-export const LikeButton: React.FC = () => {
+interface Props {
+  slug: string;
+}
+
+export const LikeButton: React.FC<Props> = ({ slug }) => {
   const [likes, setLikes] = useState<number>(0);
 
   useEffect(() => {
-    const storedLikes = localStorage.getItem("likes");
-    if (storedLikes) {
-      setLikes(Number(storedLikes));
-    }
+    // const storedLikes = localStorage.getItem("likes");
+    // if (storedLikes) {
+    //   setLikes(Number(storedLikes));
+    // }
+
+    actions.getLikes(slug).then((response) => {
+      setLikes(response.data?.likes ?? 0);
+    });
   }, []);
 
   const handleLike = () => {
     const newLikes = likes + 1;
     setLikes(newLikes);
-    localStorage.setItem("likes", newLikes.toString());
+    // localStorage.setItem("likes", newLikes.toString());
+    actions.addLike(slug).then((response) => {
+      setLikes(response.data?.likes ?? newLikes);
+    });
   };
 
   return (
