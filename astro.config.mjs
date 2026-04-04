@@ -21,6 +21,24 @@ export default defineConfig({
         optional: false,
         default: "INFORM_VALID_TOKEN",
       }),
+      FROM_EMAIL: envField.string({
+        context: "server",
+        access: "secret",
+        optional: false,
+        default: "INFORM_VALID_EMAIL",
+      }),
+      TO_EMAIL: envField.string({
+        context: "server",
+        access: "secret",
+        optional: false,
+        default: "INFORM_VALID_EMAIL",
+      }),
+      RESEND_API_KEY: envField.string({
+        context: "server",
+        access: "secret",
+        optional: false,
+        default: "INFORM_VALID_API_KEY",
+      }),
     },
   },
 });

@@ -19,6 +19,8 @@ const { content } = Astro.props;
   <p class="text-sm">{content.description}</p>
 
   <form
+    id="newsletter-form-mini"
+    method="post"
     class="border-text relative flex items-center justify-between gap-2 rounded-xl border py-2 pr-2 pl-4"
   >
     <label for="newsletter-email" class="sr-only">{content.inputLabel}</label>
@@ -39,3 +41,27 @@ const { content } = Astro.props;
     </button>
   </form>
 </section>
+
+<script>
+  import { actions } from "astro:actions";
+  const form = document.getElementById(
+    "newsletter-form-mini",
+  ) as HTMLFormElement;
+
+  const handleSubmit = async (event: Event) => {
+    event.preventDefault();
+    const form = event.target as HTMLFormElement;
+    const sendFormData = new FormData(form);
+    const result = await actions.sendSuncription(sendFormData);
+    if (result.data?.success) {
+      alert("Subscription successful!");
+      form.reset();
+    } else {
+      alert("Subscription failed. Please try again.");
+    }
+  };
+
+  if (form && form instanceof HTMLFormElement) {
+    form.addEventListener("submit", (e) => handleSubmit(e));
+  }
+</script>
