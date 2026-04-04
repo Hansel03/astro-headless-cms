@@ -67,7 +67,7 @@ const { content } = Astro.props;
     "newsletter-form-wide",
   ) as HTMLFormElement;
 
-  export const handleSubmit = async (event: Event) => {
+  const handleSubmit = async (event: Event) => {
     event.preventDefault();
     const form = event.target as HTMLFormElement;
     const sendFormData = new FormData(form);
